@@ -1,3 +1,4 @@
+//manages state!
 (function() {
 
   window.Entry = {}
@@ -13,6 +14,20 @@
     attrs.id = (idCounter += 1)
     store.push(attrs)
     return attrs
+  }
+
+  Entry.vm = function () {
+    return {
+      enteredAt: null,
+      volunteers: [Entry.volunteerVM()]
+    }
+  }
+
+  Entry.volunteerVM = function () {
+    return {
+      name: '[Your name]',
+      email: '[Your email]'
+    }
   }
 
 })()

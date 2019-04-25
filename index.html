@@ -33,7 +33,7 @@
   })
 
   // Render our app onto the page
-  m.route(document.getElementById('app'), '/', {
+  m.route(document.getElementById('app'), '/', { //DOM el to mount app to
 
     '/': EntryList,
 
@@ -41,7 +41,7 @@
 
     '/inline-example': {
       view() {
-        return m('a[href=/]', { oncreate: m.route.link }, 'Works the same!')
+        return m('a[href=/]', { oncreate: m.route.link }, 'Works the same!') 
       }
     },
 
